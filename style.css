@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+
+    --veryDarkMagenta: hsl(300, 43%, 22%);
+    --softPink: hsl(333, 80%, 67%);
+    --darkMagenta: hsl(303, 10%, 53%);
+    --lightMagenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+
+/*---------------Media Queries---------------*/
+
+/* Mobile */
+@media screen and (min-width: 375px) {
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    header {
+        background-image: url(./images/bg-pattern-top-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: top;
+        position: relative;
+        z-index: 10;
+        padding: 100px 30px;
+    }
+
+    #content {
+        padding: 0px 30px;
+    }
+
+    .title {
+        font-size: 50px;
+        color: var(--veryDarkMagenta);
+        font-size: 35px;
+        color: var(--veryDarkMagenta);
+        text-align: center;
+    }
+    
+    #description>p {
+        color: var(--darkMagenta);
+        text-align: center;
+        font-weight: 500;
+    }
+    
+    #description {
+        margin: 30px 0;
+    }
+    
+    #rated>div {
+        background-color: var(--lightMagenta);
+        border-radius: 15px;
+        margin: 15px 0;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    #rated>div>div>p {
+        color: var(--veryDarkMagenta);
+        font-weight: 700;
+        margin: 5px 0;
+    }
+    
+    #comment h4 {
+        color: var(--white);
+        margin-bottom: 5px;
+        padding-top: 5px;
+    }
+    
+    #comment p {
+        color: var(--softPink);
+        font-weight: 400;
+    }
+    
+    #comment>div {
+        background-color: var(--veryDarkMagenta);
+        border-radius: 10px;
+        margin: 20px 0;
+        padding: 30px;
+    }
+    
+    #comment>div>div {
+        display: flex;
+        align-content: center;
+    }
+    
+    #comment>div>p {
+        color: var(--white);
+        margin-top: 15px;
+    }
+    
+    #comment>div>div>div img {
+        width: 50px;
+        border-radius: 50%;
+        margin: 0 25px 0 0;
+    }
+    
+    footer {
+        background-image: url(./images/bg-pattern-bottom-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: top;
+        position: relative;
+        z-index: 10;
+        padding: 100px 30px;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1440px) {
+    .title {
+        font-size: 50px;
+        color: var(--veryDarkMagenta);
+    }
+}
