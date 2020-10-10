@@ -17,110 +17,116 @@
 /*---------------Media Queries---------------*/
 
 /* Mobile */
-@media screen and (min-width: 375px) {
-    body {
-        padding: 0;
-        margin: 0;
-    }
-
-    header {
-        background-image: url(./images/bg-pattern-top-mobile.svg);
-        background-repeat: no-repeat;
-        background-position: top;
-        position: relative;
-        z-index: 10000;
-        padding: 100px 0 0 0;
-    }
-
-    .title {
-        font-size: 35px;
-        font-weight: 700;
-        color: var(--veryDarkMagenta);
-        text-align: center;
-        padding: 0px 50px;
-    }
-
-    #description>p {
-        color: var(--darkMagenta);
-        text-align: center;
-        font-weight: 500;
-    }
-
-    #description, #rated, #comment {
-        padding: 0px 30px;
-    }
-
-    #description {
-        margin: 30px 0;
-    }
-
-    #rated>div {
-        background-color: var(--lightMagenta);
-        border-radius: 15px;
-        margin: 15px 0;
-        padding: 10px;
-        text-align: center;
-    }
-
-    #rated>div>div>p {
-        color: var(--veryDarkMagenta);
-        font-weight: 700;
-        margin: 5px 0;
-    }
-
-    #comment h4 {
-        color: var(--white);
-        margin-bottom: 5px;
-        padding-top: 5px;
-    }
-
-    #comment p {
-        color: var(--softPink);
-        font-weight: 400;
-    }
-
-    #comment>div {
-        background-color: var(--veryDarkMagenta);
-        border-radius: 10px;
-        margin: 20px 0;
-        padding: 30px;
-    }
-
-    #comment>div>div {
-        display: flex;
-        align-content: center;
-    }
-
-    #comment>div>p {
-        color: var(--white);
-        margin-top: 15px;
-    }
-
-    #comment>div>div>div img {
-        width: 50px;
-        border-radius: 50%;
-        margin: 0 25px 0 0;
-    }
-
-    footer {
-        background-image: url(./images/bg-pattern-bottom-mobile.svg);
-        background-repeat: no-repeat;
-        background-position: top;
-        position: relative;
-        z-index: 10;
-        padding: 100px 0 100px 0;
-    }
-
-    footer p{
-        padding: 0 80px;
-    }
+body {
+    padding: 0;
+    margin: 0;
 }
+
+header {
+    background-image: url(./images/bg-pattern-top-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    position: relative;
+    z-index: 10000;
+    padding: 100px 0 0 0;
+}
+
+.title {
+    font-size: 35px;
+    font-weight: 700;
+    color: var(--veryDarkMagenta);
+    text-align: center;
+    padding: 0px 50px;
+}
+
+#description>p {
+    color: var(--darkMagenta);
+    text-align: center;
+    font-weight: 500;
+}
+
+#description,
+#rated,
+#comment {
+    padding: 0px 30px;
+}
+
+#description {
+    margin: 30px 0;
+}
+
+#rated>div {
+    background-color: var(--lightMagenta);
+    border-radius: 15px;
+    margin: 15px 0;
+    padding: 10px;
+    text-align: center;
+}
+
+#rated>div>div>p {
+    color: var(--veryDarkMagenta);
+    font-weight: 700;
+    margin: 5px 0;
+}
+
+#comment h4 {
+    color: var(--white);
+    margin-bottom: 5px;
+    padding-top: 5px;
+}
+
+#comment p {
+    color: var(--softPink);
+    font-weight: 400;
+}
+
+#comment>div {
+    background-color: var(--veryDarkMagenta);
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 30px;
+}
+
+#comment>div>div {
+    display: flex;
+    align-content: center;
+}
+
+#comment>div>p {
+    color: var(--white);
+    margin-top: 15px;
+}
+
+#comment>div>div>div img {
+    width: 50px;
+    border-radius: 50%;
+    margin: 0 25px 0 0;
+}
+
+footer {
+    background-image: url(./images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    position: relative;
+    z-index: 10;
+    padding: 100px 0 100px 0;
+}
+
+footer p {
+    padding: 0 80px;
+}
+
 
 /* Desktop */
 @media screen and (min-width: 1440px) {
     body {
         padding: 0;
         margin: 0;
+        background-image: url(./images/bg-pattern-bottom-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        position: relative;
+        z-index: 10;
     }
 
     /* GRID */
@@ -128,18 +134,19 @@
         display: grid;
         grid-template-columns: 1fr 1fr 40px 2fr;
         grid-template-rows: auto;
-        grid-template-areas: 
-          "header header . rated"
-          "description description . rated"
-          "comment comment comment comment"
-          "footer footer footer footer";
+        grid-template-areas:
+            "header header . rated"
+            "description description . rated"
+            "comment comment comment comment"
+            "footer footer footer footer";
     }
+
     /* END GRID */
 
     header {
         background-image: url(./images/bg-pattern-top-desktop.svg) no-repeat top;
         background-repeat: no-repeat;
-        background-position: top left;
+        background-position: top;
         position: relative;
         z-index: 10;
         grid-area: header;
@@ -153,7 +160,7 @@
         font-size: 50px;
         color: var(--veryDarkMagenta);
         text-align: left;
-        padding: 0px 30px;
+        padding: 0px 50px 0 0;
         line-height: 50px;
     }
 
@@ -166,6 +173,7 @@
 
     #description {
         margin: 15px 0;
+        padding: 0px 50px 0 0;
         grid-area: description;
     }
 
@@ -199,10 +207,10 @@
         align-self: flex-end;
     }
 
-    #rated>div>div{
+    #rated>div>div {
         padding: 0 15px;
     }
-    
+
 
     #rated>div>div>p {
         color: var(--veryDarkMagenta);
@@ -212,10 +220,12 @@
 
     #comment {
         grid-area: comment;
-        padding: 50px 0 0 0;
+        margin: 50px 0;
+        padding: 0;
+        height: 300px;
         display: flex;
         flex-direction: row;
-        margin: 0;
+        justify-content: space-between;
     }
 
     #comment h4 {
@@ -232,21 +242,26 @@
     #comment>div {
         background-color: var(--veryDarkMagenta);
         border-radius: 10px;
-        margin: 20px 20px;
-        padding: 30px;
+        width: 300px;
+        height: auto;
+        max-height: 150px;
+        margin: 0;
+        padding: 50px 30px;
+        display: flex;
+        flex-direction: column;
     }
 
 
     #comment div:nth-child(0n+1) {
-        justify-content: flex-start;
+        align-self: flex-start;
     }
 
     #comment div:nth-child(0n+2) {
-        justify-content: center;
+        align-self: center;
     }
 
     #comment div:nth-child(0n+3) {
-        justify-content: flex-end;
+        align-self: flex-end;
     }
 
     #comment>div>div {
@@ -266,8 +281,7 @@
     }
 
     footer {
-        background-image: url(./images/bg-pattern-bottom-desktop.svg);
-        background-repeat: no-repeat;
+        background-image: unset;
         grid-area: footer;
     }
 }
