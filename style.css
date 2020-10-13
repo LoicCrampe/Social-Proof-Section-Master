@@ -258,6 +258,7 @@ footer p {
 
     #comment div:nth-child(0n+2) {
         align-self: center;
+        margin: 0 30px;
     }
 
     #comment div:nth-child(0n+3) {
